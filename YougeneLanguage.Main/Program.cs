@@ -13,9 +13,9 @@ internal class Program
 
 		var interpreter = new BFInterpreter(new Dictionary<BFInstruction, string>()
 		{
-			{ BFInstruction.AdvancePointer, "ポチ" },
+			{ BFInstruction.AdvancePointer, "もん!" },
 			{ BFInstruction.RetreatPointer, "capa" },
-			{ BFInstruction.IncrementValue, "もん!" },
+			{ BFInstruction.IncrementValue, "ゴ" },
 			{ BFInstruction.DecrementValue, "ちゃんか" },
 			{ BFInstruction.OutputCharacter, "だし!" },
 			{ BFInstruction.InputCharacter, "安直だね～" },
