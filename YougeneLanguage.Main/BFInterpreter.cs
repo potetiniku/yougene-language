@@ -92,8 +92,10 @@ internal class BFInterpreter
 
 	private BFInstruction[] Parse(string code)
 	{
+		string formatted = Regex.Replace(code, @"\s", "");
 		string pattern = string.Join('|', InstructionSet.Values);
-		return Regex.Split(code, $"({pattern})")
+
+		return Regex.Split(formatted, $"({pattern})")
 			.Where(s => s != string.Empty)
 			.Select(i => InstructionSet.First(pair => pair.Value == i).Key)
 			.ToArray();
