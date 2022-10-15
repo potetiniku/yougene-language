@@ -4,6 +4,13 @@ internal class Program
 {
 	private static void Main(string[] args)
 	{
+		if (args.Length != 1)
+		{
+			Console.WriteLine("使い方: 第1引数に実行するファイルのパスを指定してください。");
+			Console.WriteLine(@"例: .\YougeneLanguage.exe example.yg");
+			return;
+		}
+
 		var interpreter = new BFInterpreter(new Dictionary<BFInstruction, string>()
 		{
 			{ BFInstruction.AdvancePointer, "ポチ" },
